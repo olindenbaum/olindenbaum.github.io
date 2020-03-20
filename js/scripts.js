@@ -16,14 +16,14 @@
 
         main();
 
-        $('#particles-js').css({ "height": $('#projects').offset().top + "px" })
+        $('#particles-js').css({ "height": $('#startTag').offset().top + "px" })
 
 
         hidePreloader();
     });
 
     $(window).resize(function() {
-        $('#particles-js').css({ "height": $('#projects').offset().top + "px" })
+        $('#particles-js').css({ "height": $('#startTag').offset().top + "px" })
     });
 
 
