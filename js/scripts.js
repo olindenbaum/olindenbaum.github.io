@@ -16,14 +16,15 @@
 
         main();
 
-        $('#particles-js').css({ "height": $('#currentWork').offset().top + "px" })
-
+        $('#particles-js').css({ "height": $('#currentWork').offset().top + "px" });
+        $('#currentWork').css({ "margin-top": $('#currentWork').offset().top - $('#headShotContainer').offset().top - 10 + "px" });
 
         hidePreloader();
     });
 
     $(window).resize(function() {
-        $('#particles-js').css({ "height": $('#currentWork').offset().top + "px" })
+        $('#particles-js').css({ "height": $('#currentWork').offset().top + "px" });
+        // $('#currentWork').css({ "margin-top": $('#currentWork').offset().top - $('#headShotContainer').offset().top + "px" });
     });
 
 
