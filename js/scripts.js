@@ -17,8 +17,11 @@
         main();
 
         $('#particles-js').css({ "height": $('#currentWork').offset().top + "px" });
-        $('#currentWork').css({ "margin-top": $('#currentWork').offset().top - $('#headShotContainer').offset().top - 10 + "px" });
+        var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
+        if (width < 1024) {
+            $('#currentWork').css({ "padding-top": $('#currentWork').offset().top - $('#headShotContainer').offset().top - 10 + "px" });
 
+        }
         hidePreloader();
     });
 
