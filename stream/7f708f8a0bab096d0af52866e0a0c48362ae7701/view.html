@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/anime.min.js"></script>
+    <link href="../../css/streamStyles.css" rel="stylesheet">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <title>Current Stream</title>
+    <script type="text/javascript">
+        "use strict";
+
+        window.history.replaceState({
+            "html": null,
+            "pageTitle": null
+        }, "", "/stream/view.html");
+    </script>
+    <!-- UNCOMMENT OUT TO HIDE URL -->
+</head>
+
+<body class="bg">
+    <div>
+        <h1> accessed password protected page</h1>
+        <div class="container-fluid">
+            <div id="streamViewer" class="row">
+
+                <div class="col-sm-2">
+                    <h3> hello</h3>
+                </div>
+                <div id="stream" class="col-sm-10">
+                    <iframe src="https://www.youtube-nocookie.com/embed/9Auq9mYxFEE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
