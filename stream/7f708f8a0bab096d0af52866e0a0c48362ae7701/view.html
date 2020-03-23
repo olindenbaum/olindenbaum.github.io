@@ -8,30 +8,68 @@
     <link href="../../css/streamStyles.css" rel="stylesheet">
     <link href="../../css/bootstrap.css" rel="stylesheet">
     <title>Current Stream</title>
-    <script type="text/javascript">
+
+
+    <!-- <script type="text/javascript">
         "use strict";
 
         window.history.replaceState({
             "html": null,
             "pageTitle": null
         }, "", "/stream/view.html");
-    </script>
+    </script> -->
     <!-- UNCOMMENT OUT TO HIDE URL -->
 </head>
 
 <body class="bg">
     <div>
-        <h1> accessed password protected page</h1>
+        <h1 class="centerText">accessed password protected page</h1>
         <div class="container-fluid">
             <div id="streamViewer" class="row">
 
                 <div class="col-sm-2">
-                    <h3> hello</h3>
+
                 </div>
-                <div id="stream" class="col-sm-10">
+                <div id="stream" class="col-sm-8">
                     <iframe src="https://www.youtube-nocookie.com/embed/9Auq9mYxFEE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+                <div class="col-sm-2">
 
+                </div>
+                <div class="container-fluid centerText">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <!-- <h3>Info</h3> -->
+                        </div>
+                        <div id="chatBox" class="col-sm-6">
+                            <script id="chatBroEmbedCode">
+                                /* Chatbro Widget Embed Code Start */
+                                function ChatbroLoader(chats, async) {
+                                    async = !1 !== async;
+                                    var params = {
+                                            embedChatsParameters: chats instanceof Array ? chats : [chats],
+                                            lang: navigator.language || navigator.userLanguage,
+                                            needLoadCode: 'undefined' == typeof Chatbro,
+                                            embedParamsVersion: localStorage.embedParamsVersion,
+                                            chatbroScriptVersion: localStorage.chatbroScriptVersion
+                                        },
+                                        xhr = new XMLHttpRequest;
+                                    xhr.withCredentials = !0, xhr.onload = function() {
+                                        eval(xhr.responseText)
+                                    }, xhr.onerror = function() {
+                                        console.error('Chat loading error')
+                                    }, xhr.open('GET', '//www.chatbro.com/embed.js?' + btoa(unescape(encodeURIComponent(JSON.stringify(params)))), async), xhr.send()
+                                } /* Chatbro Widget Embed Code End */
+                                ChatbroLoader({
+                                    encodedChatId: '45GFR'
+                                });
+                            </script>
+                        </div>
+                        <div class="col-sm-3">
+                            <!-- <h3>Info</h3> -->
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
