@@ -107,14 +107,18 @@
                 width: initialWidth
             };
 
-        function init() {
+        function terminate() {
+            killAll = true;
+        }
 
+        function init() {
+            killAll = false;
             lines.length = 0;
 
             for (var i = 0; i < initialLines; ++i)
                 lines.push(new Line(starter));
 
-            ctx.fillStyle = "rgba(47, 44, 61, 0.05)";
+            ctx.fillStyle = '#222';
             ctx.fillRect(0, 0, w, h);
 
             // if you want a cookie ;)
@@ -135,9 +139,9 @@
             ++frame;
 
             ctx.shadowBlur = 0;
-            ctx.fillStyle = 'rgba(47, 44, 61, 0.05)';
+            ctx.fillStyle = 'rgba(0,0,0,.02)';
             ctx.fillRect(0, 0, w, h);
-            ctx.shadowBlur = 1.5;
+            ctx.shadowBlur = .5;
 
             for (var i = 0; i < lines.length; ++i)
 
@@ -215,7 +219,10 @@
 
                 // kill the poor thing
                 if (Math.random() < .2) dead = true;
+
+                if (killAll) dead = true;
             }
+            if (killAll) dead = true;
 
             ctx.strokeStyle = ctx.shadowColor = getColor(this.x);
             ctx.beginPath();
@@ -293,6 +300,18 @@
                         delay: 400,
                         easing: 'easeInOutCirc',
                         complete: function(anim) {
+                            w = c.width = window.innerWidth;
+                            h = c.height = window.innerHeight;
+                            ctx = c.getContext('2d');
+
+                            ctx.fillStyle = '#2d283c';
+                            ctx.fillRect(0, 0, w, h);
+                            terminate();
+                            ctx.fillStyle = '#2d283c';
+                            ctx.fillRect(0, 0, w, h);
+                            $('#c').css({
+                                'background-color': '#2d283c'
+                            });
                             window.location = url;
                             //TODO FADE OUT TRACER LINES
                             //TODO CHANGE CANVAS BG TO rgba(47, 44, 61, 0.2)
