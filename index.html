@@ -37,6 +37,7 @@
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <script src="js/particles.min.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
 
 
@@ -73,7 +74,8 @@
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
 
         <!-- Image Logo -->
-        <a id="titleName" class="navbar-brand logo-text page-scroll textPaddingFromLeft" href="index.html">Oscar Lindenbaum</a>
+        <a id="titleName" class="navbar-brand logo-text page-scroll textPaddingFromLeft" href="index.html">Oscar
+            Lindenbaum</a>
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-awesome fas fa-bars"></span>
@@ -170,360 +172,272 @@
                         <h2 class="projectsTitle text-center">
                             What am I currently working on?
                         </h2>
+                        <br>
+                        <img id="hackQuarantine" class="img-fluid" style="display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 52%;" src="images/hackQuarantine.png" onclick="openInNewTab('hackquarantine.com')" lt="alternative">
                         <p class="text-center">
                             Currently, the world is going through a pandemic called COVID-19. During these worrying times a large collection of developers are coming together to help those suffering. From March 23rd to April 12th I will be forming a team and see what we can create.
                             "By working with medical professionals and industry, we’ll provide the knowledge and tools to empower hackers to work towards around improving health, remote working and helping vulnerable populations."
                         </p>
+                        <br>
+                        <div class="container-flex center" style="padding-left: 25%; padding-right: 25%; overflow-y: auto; ">
+                            <div style="border-style: solid; border-color: white; border-width: medium;border-radius: 8px; display: flex">
+                                <img id=" coversationLogo " class="img-fluid " src="images/coversationLogo.png " lt="alternative " width=15% height=15% style="float:left; margin-right: 5%; ">
 
-                        <img id="hackQuarantine" class="img-fluid center" src="images/hackQuarantine.png" onclick="openInNewTab('hackquarantine.com')" lt="alternative">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features -->
-        <div id="projects" class="tabs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 id="projectsTitle">MY PROJECTS</h2>
-                        <div class="p-heading p-large">What type of things I do</div>
-                        <h3>I have experience in
-                            <span class="txt-rotate positionAbsoluteTop centerText" data-period="1500" data-rotate='[ " python.", " java.", " javascript.", " html.", " flutter."," bash."," CSS."," SQL." ]'></span>
-                        </h3>
-                    </div>
-                    <!-- end of col -->
-                </div>
-                <!-- end of row -->
-                <div class="row">
-
-                    <!-- Tabs Links  put list of projects done here-->
-                    <ul class="nav nav-tabs" id="lenoTabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-heart"></i>TALKING S
-                                    WORD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i
-                                        class="fas fa-music"></i>NOTESWITCH</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i
-                                        class="fas fa-search"></i>MONITORING</a>
-                        </li>
-                    </ul>
-                    <!-- end of tabs links -->
-
-
-                    <!-- Tabs Content-->
-                    <div class="tab-content" id="lenoTabsContent">
-
-                        <!-- Tab -->
-                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-                            <div class="container">
-                                <div class="row">
-
-                                    <!-- Image Pane -->
-                                    <div class="col-md-4">
-                                        <img id="swordLogo" class="img-fluid" src="images/swordLogo.png" alt="alternative">
-                                    </div>
-                                    <!-- end of image pane -->
-
-                                    <!-- Text And Icon Cards Area -->
-                                    <div class="col-md-8">
-                                        <div class="text-area">
-                                            <h3>Talking S Word</h3>
-                                            <p>NoteSwitch is a windows application designed for the automatic transcription of a live audio feed,<br>to a readable and editable score file.
-                                                <br> All generated files can then be searched for on a server and either the MIDI or supporting score file can be downloaded.<br><br> The application also allows for single note identification for tuning
-                                                and transposing between different instrument keys.<br><br><br>You can read the supporting documentation <a href="/docs/NEA Oscar Lindenbaum.docx">here</a>.</p>
-                                        </div>
-                                        <!-- end of text-area -->
-
-
-                                    </div>
-                                    <!-- end of col-md-8 -->
-
-
-                                    <!-- end of text and icon cards area -->
-
-                                </div>
-                                <!-- end of row -->
-
-                                <div class="d-flex flex-row">
-                                    <div class="col-xs-4 cordir">
-                                        <img id="swordMockupOne" class="img-fluid mockups" src="images/swordMockupOne_iphonexspacegrey_portrait.png" alt="alternative">
-                                    </div>
-
-                                    <div class="col-xs-8 cordir">
-                                        <img id="swordMockupTwo" class="img-fluid mockups" src="images/swordMockupTwo_iphonexspacegrey_portrait.png" alt="alternative">
-                                    </div>
-                                </div>
-
+                                <div style="font-size:large; ">The project decided on for HQ is a free messaging service to interact with others during quarantine, called Coversation.</div>
                             </div>
-                            <!-- end of container -->
-                        </div>
-                        <!-- end of tab-pane -->
-                        <!-- end of tab -->
-
-                        <!-- Tab -->
-                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-                            <div class="container">
-                                <div class="row">
-
-                                    <!-- Image Pane -->
-                                    <div class="col-md-4">
-                                        <img class="img-fluid" src="images/NSLogo.png" alt="alternative">
-                                    </div>
-                                    <!-- end of image pane -->
-
-                                    <!-- Text And Icon Cards Area -->
-                                    <div class="col-md-8">
-                                        <div class="text-area">
-                                            <h3>NoteSwitch</h3>
-                                            <p>NoteSwitch is a windows application designed for the automatic transcription of a live audio feed,<br>to a readable and editable score file.
-                                                <br> All generated files can then be searched for on a server and either the MIDI or supporting score file can be downloaded.<br><br> The application also allows for single note identification for tuning
-                                                and transposing between different instrument keys.<br><br><br>You can read the supporting documentation <a href="/docs/NEA Oscar Lindenbaum.docx">here</a>.</p>
-                                        </div>
-                                        <!-- end of text-area -->
-
-
-                                    </div>
-                                    <!-- end of col-md-8 -->
-
-                                    <!-- end of text and icon cards area -->
-
-                                </div>
-                                <!-- end of row -->
-                                <div class="d-flex flex-row">
-                                    <div class="col-xs-4 cordir">
-                                        <img id="transcribePhoto" class="img-fluid mockups" src="images/transcribeNEA.png" alt="alternative">
-                                    </div>
-
-                                    <div class="col-xs-8 cordir">
-                                        <img id="transposePhoto" class="img-fluid mockups" src="images/transposeNEA.png" alt="alternative">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end of container -->
-                        </div>
-                        <!-- end of tab-pane -->
-                        <!-- end of tab -->
-
-                        <!-- Tab -->
-                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-                            <div class="container">
-                                <div class="row">
-
-                                    <!-- Text And Icon Cards Area -->
-                                    <div class="col-md-8">
-                                        <div class="icon-cards-area">
-                                            <div class="card">
-                                                <div class="card-icon">
-                                                    <i class="far fa-calendar-check"></i>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Calendar Input</h4>
-                                                    <p>Schedule your appointments, meetings and periodical evaluations using the provided in-app calendar option</p>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-icon">
-                                                    <i class="far fa-file-code"></i>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Visual Editor</h4>
-                                                    <p>Leno provides a well designed and ergonomic visual editor for you to edit your notes and input data</p>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-icon">
-                                                    <i class="fas fa-cube"></i>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Good Foundation</h4>
-                                                    <p>Get a solid foundation for your self development efforts. Try Leno mobile app for any mobile platform</p>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-icon">
-                                                    <i class="far fa-bookmark"></i>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Easy Reading</h4>
-                                                    <p>Reading focus mode for long form articles, ebooks and other materials which involve large text areas</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end of icon cards area -->
-
-                                        <div class="text-area">
-                                            <h3>Monitoring Tools Evaluation</h3>
-                                            <p>Monitor the evolution of your finances and health state using tools integrated in Leno. The generated real time reports can be filtered based on any <a class="turquoise" href="/404.html">desired
-                                                        criteria</a>.
-                                            </p>
-                                        </div>
-                                        <!-- end of text-area -->
-                                    </div>
-                                    <!-- end of col-md-8 -->
-                                    <!-- end of text and icon cards area -->
-
-                                    <!-- Image Pane -->
-                                    <div class="col-md-4">
-                                        <img class="img-fluid" src="images/features-iphone-3.png" alt="alternative">
-                                    </div>
-                                    <!-- end of image pane -->
-
-                                </div>
-                                <!-- end of row -->
-                            </div>
-                            <!-- end of container -->
-                        </div>
-                        <!-- end of tab-pane -->
-                        <!-- end of tab -->
-
-                    </div>
-                    <!-- end of tab-content -->
-                    <!-- end of tabs content -->
-
-                </div>
-                <!-- end of row -->
-            </div>
-            <!-- end of container -->
-        </div>
-
-        <!-- end of tabs -->
-        <!-- end of features -->
-
-
-        <!-- Contact -->
-        <div id="contact" class="form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2>CONTACT</h2>
-                        <ul class="list-unstyled li-space-lg">
-                            <li><i class="fas fa-phone"></i><a class="blue" href="tel: Coming Soon">+01 23456789</a>
-                            </li>
-                            <li><i class="fas fa-envelope"></i><a class="blue" href="mailto:oscarlindenbaum@gmail.com">oscarlindenbaum@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <!-- end of col -->
-                </div>
-                <!-- end of row -->
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-
-                        <!-- Contact Form -->
-                        <form id="contactForm" data-toggle="validator" data-focus="false" action="/php/contactform-process.php" method="POST">
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" id="cname" required>
-                                <label class="label-control" for="cname">Name</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control-input" id="cemail" required>
-                                <label class="label-control" for="cemail">Email</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control-textarea" id="message" required></textarea>
-                                <label class="label-control" for="cmessage">Your message</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group checkbox">
-                                <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree to the stated conditions in <a href="privacy-policy.html">Privacy Policy</a> and
-                                <a href="terms-conditions.html">Terms Conditions</a>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
-                            </div>
-                            <div class="form-message">
-                                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                            </div>
-                        </form>
-                        <!-- end of contact form -->
-
-                    </div>
-                    <!-- end of col -->
-                </div>
-                <!-- end of row -->
-            </div>
-            <!-- end of container -->
-        </div>
-        <!-- end of form -->
-        <!-- end of contact -->
-
-        <!-- Footer -->
-        <div class="footer" id="footerEdit">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="footer-col last">
-                            <h4>Social Media</h4>
-                            <span class="fa-stack">
-                                <a href="/404.html">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="https://uk.linkedin.com/in/oscar-lindenbaum-8b5277195">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                                </a>
-                            </span>
                         </div>
                     </div>
-                    <!-- end of col -->
+
+                    <br>
+                    <br>
+                    <br>
+
                 </div>
-                <!-- end of row -->
+
             </div>
-            <!-- end of container -->
         </div>
-        <!-- end of footer -->
-        <!-- end of footer -->
+    </div>
+    </div>
+
+    <!-- Features -->
+    <div id="projects " class="tabs ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-12 ">
+                    <h2 id="projectsTitle ">MY PROJECTS</h2>
+                    <div class="p-heading p-large ">What type of things I do</div>
+                    <h3>I have experience in
+                        <span class="txt-rotate positionAbsoluteTop centerText " data-period="1500 " data-rotate='[ " python. ", " java. ", " javascript. ", " html. ", " flutter. "," bash. "," CSS. "," SQL. " ]'></span>
+                    </h3>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+            <div class="row ">
+
+                <!-- Tabs Links  put list of projects done here-->
+                <ul class="nav nav-tabs " id="lenoTabs " role="tablist ">
+                    <li class="nav-item ">
+                        <a class="nav-link active " id="nav-tab-1 " data-toggle="tab " href="#tab-1 " role="tab " aria-controls="tab-1 " aria-selected="true "><i class="fas fa-heart "></i>TALKING S
+                            WORD</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " id="nav-tab-2 " data-toggle="tab " href="#tab-2 " role="tab " aria-controls="tab-2 " aria-selected="false "><i class="fas fa-music "></i>NOTESWITCH</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " id="nav-tab-3 " data-toggle="tab " href="#tab-3 " role="tab " aria-controls="tab-3 " aria-selected="false "><i class="fas fa-search "></i>MONITORING</a>
+                    </li>
+                </ul>
+                <!-- end of tabs links -->
 
 
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="p-small">Copyright © Oscar</p>
+                <!-- Tabs Content-->
+                <div class="tab-content " id="lenoTabsContent ">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active " id="tab-1 " role="tabpanel " aria-labelledby="tab-1 ">
+                        <div class="container ">
+                            <div class="row ">
+
+                                <!-- Image Pane -->
+                                <div class="col-md-4 ">
+                                    <img id="swordLogo " class="img-fluid " src="images/swordLogo.png " alt="alternative ">
+                                </div>
+                                <!-- end of image pane -->
+
+                                <!-- Text And Icon Cards Area -->
+                                <div class="col-md-8 ">
+                                    <div class="text-area ">
+                                        <h3>Talking S Word</h3>
+                                        <p>NoteSwitch is a windows application designed for the automatic transcription of a live audio feed,<br>to a readable and editable score file.
+                                            <br> All generated files can then be searched for on a server and either the MIDI or supporting score file can be downloaded.<br><br> The application also allows for single note identification for tuning and
+                                            transposing between different instrument keys.<br><br><br>You can read the supporting documentation <a href="/docs/NEA Oscar Lindenbaum.docx ">here</a>.
+                                        </p>
+                                    </div>
+                                    <!-- end of text-area -->
+
+
+                                </div>
+                                <!-- end of col-md-8 -->
+
+
+                                <!-- end of text and icon cards area -->
+
+                            </div>
+                            <!-- end of row -->
+
+                            <div class="d-flex flex-row ">
+                                <div class="col-xs-4 cordir ">
+                                    <img id="swordMockupOne " class="img-fluid mockups " src="images/swordMockupOne_iphonexspacegrey_portrait.png " alt="alternative ">
+                                </div>
+
+                                <div class="col-xs-8 cordir ">
+                                    <img id="swordMockupTwo " class="img-fluid mockups " src="images/swordMockupTwo_iphonexspacegrey_portrait.png " alt="alternative ">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end of container -->
                     </div>
-                    <!-- end of col -->
+                    <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade " id="tab-2 " role="tabpanel " aria-labelledby="tab-2 ">
+                        <div class="container ">
+                            <div class="row ">
+
+                                <!-- Image Pane -->
+                                <div class="col-md-4 ">
+                                    <img class="img-fluid " src="images/NSLogo.png " alt="alternative ">
+                                </div>
+                                <!-- end of image pane -->
+
+                                <!-- Text And Icon Cards Area -->
+                                <div class="col-md-8 ">
+                                    <div class="text-area ">
+                                        <h3>NoteSwitch</h3>
+                                        <p>NoteSwitch is a windows application designed for the automatic transcription of a live audio feed,<br>to a readable and editable score file.
+                                            <br> All generated files can then be searched for on a server and either the MIDI or supporting score file can be downloaded.<br><br> The application also allows for single note identification for tuning and
+                                            transposing between different instrument keys.<br><br><br>You can read the supporting documentation <a href="/docs/NEA Oscar Lindenbaum.docx ">here</a>.
+                                        </p>
+                                    </div>
+                                    <!-- end of text-area -->
+
+
+                                </div>
+                                <!-- end of col-md-8 -->
+
+                                <!-- end of text and icon cards area -->
+
+                            </div>
+                            <!-- end of row -->
+                            <div class="d-flex flex-row ">
+                                <div class="col-xs-4 cordir ">
+                                    <img id="transcribePhoto " class="img-fluid mockups " src="images/transcribeNEA.png " alt="alternative ">
+                                </div>
+
+                                <div class="col-xs-8 cordir ">
+                                    <img id="transposePhoto " class="img-fluid mockups " src="images/transposeNEA.png " alt="alternative ">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of container -->
+                    </div>
+                    <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade " id="tab-3 " role="tabpanel " aria-labelledby="tab-3 ">
+                        <div class="container ">
+                            <div class="row ">
+                                <h2> To Be Added</h2>
+                            </div>
+                            <!-- end of row -->
+                        </div>
+                        <!-- end of container -->
+                    </div>
+                    <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
                 </div>
-                <!-- enf of row -->
+                <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
             </div>
-            <!-- end of container -->
+            <!-- end of row -->
         </div>
-        <!-- end of copyright -->
-        <!-- end of copyright -->
+        <!-- end of container -->
+    </div>
+
+    <!-- end of tabs -->
+    <!-- end of features -->
+
+
+    <!-- Footer -->
+    <div class="footer " id="footerEdit ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-4 center ">
+                    <div class="footer-col last ">
+                        <h4>Social Media</h4>
+                        <span class="fa-stack ">
+                            <a href="/404.html ">
+                                <i class="fas fa-circle fa-stack-2x "></i>
+                                <i class="fab fa-facebook-f fa-stack-1x "></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack ">
+                            <a href="https://uk.linkedin.com/in/oscar-lindenbaum-8b5277195 ">
+                                <i class="fas fa-circle fa-stack-2x "></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x "></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md4 ">
+                    <div class="LI-profile-badge " data-version="v1 " data-size="large " data-locale="en_US " data-type="horizontal " data-theme="dark " data-vanity="oscar-lindenbaum-8b5277195 "><a class="LI-simple-link " href='https://uk.linkedin.com/in/oscar-lindenbaum-8b5277195?trk=profile-badge'>Oscar
+                            Lindenbaum</a>
+                    </div>
+                </div>
+                <div class="col-md-4 center ">
+                    <div class="footer-col last ">
+                        <h3>Want to talk?</h3>
+                        <h5> Email me at: oscarlindenbaum@gmail.com</h5>
+
+                    </div>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-12 ">
+                    <p class="p-small ">Copyright © Oscar</p>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- enf of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of copyright -->
+    <!-- end of copyright -->
     </div>
 
 
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js "></script>
     <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script>
+    <script src="js/popper.min.js "></script>
     <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js "></script>
     <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.easing.min.js "></script>
     <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.min.js "></script>
     <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.js "></script>
     <!-- Magnific Popup for lightboxes -->
-    <script src="js/morphext.min.js"></script>
+    <script src="js/morphext.min.js "></script>
     <!-- Morphtext rotating text in the header -->
-    <script src="js/validator.min.js"></script>
+    <script src="js/validator.min.js "></script>
     <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js "></script>
     <!-- Custom scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js "></script>
 
 </body>
 
