@@ -1,6 +1,6 @@
 {
-    "name": "cook_safe_moderator_v3",
-    "short_name": "cook_safe_moderator_v3",
+    "name": "cook_safe_v3",
+    "short_name": "cook_safe_v3",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",
