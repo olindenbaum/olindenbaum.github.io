@@ -17,11 +17,21 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-163766522-1');
+		appVersion = 2;
+		
+		
+		function startUrls(){
+		var result = 2;
+		document.getElementById("internalUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/1" + result;
+		document.getElementById("internalUrl").textContent="Registered Internal Tester Download v" + result;
+		document.getElementById("alphaUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/2" + result;
+		document.getElementById("alphaUrl").textContent="Registered Alpha Tester Download v" + result;
+		}
     </script>
 
 </head>
 
-<body>
+<body onload="startUrls()">
     <h1>Oxfordshire County Council Projects</h1>
     <ul>
         <li>
@@ -29,10 +39,26 @@
         </li>
         <li> <a href="cook_safe_moderator/index.html">Cook_Safe_moderator_v3</a></li>
 		<br>
-        <li> <a href="https://play.google.com/apps/test/com.lindev.cook_safe/2" </a>Registered Internal Tester Download
+		
+        <li> <a href="#" id = "internalUrl" </a>Registered Internal Tester Download
         </li>
-        <li> <a href="https://play.google.com/apps/test/com.lindev.cook_safe/1" </a>Registered Alpha Tester Download
+        <li> <a href="#" id = "alphaUrl" </a>Registered Alpha Tester Download
         </li>
+		<br>
+		<textarea cols="10" id="SearchText" rows="1"></textarea>
+
+		<button onclick="updateUrls()" type="button">Set URLS to Specific Version</button>
+
+		<script>
+		function updateUrls() {
+			var result = document.getElementById("SearchText").value;
+			//document.getElementById("result").innerHTML = result;
+			document.getElementById("internalUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/1" + result;
+			document.getElementById("internalUrl").textContent="Registered Internal Tester Download v" + result;
+			document.getElementById("alphaUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/2" + result;
+			document.getElementById("alphaUrl").textContent="Registered Alpha Tester Download v" + result;
+		}		
+		</script>
 		<br>
         <li><a href="builds/release/app-release.apk">Cook_Safe_v3 APK
                     </a></li>
@@ -50,6 +76,7 @@
         <li> <a href="cook_safe_manual.docx">Documentation (DOCX)</a></li>
         <li> <a href="cook_safe_manual.pdf">Documentation (PDF)</a></li>
     </ul>
+
 </body>
 
 </html>
