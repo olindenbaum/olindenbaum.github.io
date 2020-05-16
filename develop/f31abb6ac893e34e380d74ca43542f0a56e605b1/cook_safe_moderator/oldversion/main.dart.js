@@ -30878,7 +30878,8 @@ o.P(C.G,m,null,null)}return P.I(null,s)}})
 return P.J($async$rQ,s)},
 a4o:function(a,b,c){var t,s,r,q,p='<head>\n<style>\nbody {background-color: white;}\ntable {\n    table-layout: auto;\n    border-collapse: collapse;\n    width: 100%;\n}\ntable td {\n    border: 1px solid #ccc;\n}\n</style>\n</head><div class="container">\n  <div class="row">\n    <div class="col-md-6q">\n      <div class="form-group">\n        <label for="data">Chat '+b+'</label>\n      </div><!-- form-group -->\n    </div><!-- /col --> <div id="tableGoesHere" class="col-md-6"><table class="table" border="1">',o=C.d.N("Moved from cache by ",$.dZ.b.b)
 for(t=c.length,s="<thead><tr><th>To</th><th>From</th><th>Contents</th></tr></thead><tbody>",r=0;r<c.length;c.length===t||(0,H.E)(c),++r){q=c[r]
-s+=C.d.N(C.d.N("<tr><td>"+o+"</td><td>",a)+"</td><td>",J.aF(J.N(q,"contents")))+"</td></tr>"}return p+(s+"</tbody>")+"</table></div>\n    <!-- col -->\n  </div><!-- /row -->\n</div><!-- container -->\n"},
+s+=C.d.N(C.d.N("<tr><td>"+o+"</td><td>",a)+"</td><td>",J.aF(J.N(q,"contents")))+"</td></tr>"}s+="</tbody>"
+return'<style>\ndiv {\n  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\nlabel {\ndisplay: block;\n    text-align: center;\nfont-size: 25px;\nfont-weight: bold;\n}\n\ntd, th {\n  border: 1px solid #ddd;\n  padding: 8px;\n}\n\ntr:nth-child(even){background-color: #f2f2f2;}\n\ntr:hover {background-color: #ddd;}\n\n th {\n  padding-top: 12px;\n  padding-bottom: 12px;\n  text-align: left;\n  background-color: #4CAF50;\n  color: white;\n}\n\nbody {background-color: white;}\ntable {\n    table-layout: auto;\n    border-collapse: collapse;\n    width: 100%;\n}\ntable td {\n    border: 1px solid #ccc;\n}\n</style>\n'+p+s+"</table></div>\n    <!-- col -->\n  </div><!-- /row -->\n</div><!-- container -->\n"},
 pa:function(a,b,c,d){return this.a7C(a,b,c,d)},
 a7C:function(a,a0,a1,a2){var t=0,s=P.K(u.z),r=1,q,p=[],o=this,n,m,l,k,j,i,h,g,f,e,d,c,b
 var $async$pa=P.G(function(a4,a5){if(a4===1){q=a5
@@ -31269,7 +31270,7 @@ else if(a===C.z)$.Y.P(C.l,"buttonSqueezeAnimation dismissed",t,t)},
 $S:29}
 F.a5M.prototype={
 $0:function(){var t=null
-return A.au8(U.ack("images/logo.png",C.x,t,t,t,!1,C.d9,t,t,t,!1,C.bx,8,t,t),"Developed by Oscar Lindenbaum","Cook Safe","3.4.7+0",this.a)},
+return A.au8(U.ack("images/logo.png",C.x,t,t,t,!1,C.d9,t,t,t,!1,C.bx,8,t,t),"Developed by Oscar Lindenbaum","Cook Safe","3.4.7+1",this.a)},
 $C:"$0",
 $R:0,
 $S:1}
@@ -31884,7 +31885,8 @@ for(g=J.aE(p),f=J.d9(o),l="<thead><tr><th>To</th><th>From</th><th>Contents</th><
 i=J.a8(j)
 if(!(J.e(i.h(j,"to"),i.h(j,"from"))&&J.e(i.h(j,"contents"),"ignore"))){k=J.e(J.aF(i.h(j,"from")),$.dZ.b.b)&&!0
 h=C.d.N("<tr><td>",k?f.i(o):m)+"</td><td>"
-l+=C.d.N(C.d.N(h,k?m:f.i(o))+"</td><td>",J.aF(i.h(j,"contents")))+"</td></tr>"}}r=n+(l+"</tbody>")+"</table></div>\n    <!-- col -->\n  </div><!-- /row -->\n</div><!-- container -->\n"
+l+=C.d.N(C.d.N(h,k?m:f.i(o))+"</td><td>",J.aF(i.h(j,"contents")))+"</td></tr>"}}l+="</tbody>"
+r='<style>\ndiv {\n  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\nlabel {\ndisplay: block;\n    text-align: center;\nfont-size: 25px;\nfont-weight: bold;\n}\n\ntd, th {\n  border: 1px solid #ddd;\n  padding: 8px;\n}\n\ntr:nth-child(even){background-color: #f2f2f2;}\n\ntr:hover {background-color: #ddd;}\n\n th {\n  padding-top: 12px;\n  padding-bottom: 12px;\n  text-align: left;\n  background-color: #4CAF50;\n  color: white;\n}\n\nbody {background-color: white;}\ntable {\n    table-layout: auto;\n    border-collapse: collapse;\n    width: 100%;\n}\ntable td {\n    border: 1px solid #ccc;\n}\n</style>\n'+n+l+"</table></div>\n    <!-- col -->\n  </div><!-- /row -->\n</div><!-- container -->\n"
 t=1
 break
 case 1:return P.I(r,s)}})
