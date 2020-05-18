@@ -1,2 +1,4 @@
 *.bat
 builds/ios/*
+develop/f31abb6ac893e34e380d74ca43542f0a56e605b1/builds/ios/Payload/Runner.app
+develop/f31abb6ac893e34e380d74ca43542f0a56e605b1/builds/ios/Payload.ipa
