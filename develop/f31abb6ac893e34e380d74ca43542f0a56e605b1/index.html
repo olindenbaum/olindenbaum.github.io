@@ -17,16 +17,16 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-163766522-1');
-		appVersion = 3;
-		
-		
-		function startUrls(){
-		var result = 2;
-		document.getElementById("internalUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/1" + result;
-		document.getElementById("internalUrl").textContent="Registered Internal Tester Download v" + result;
-		document.getElementById("alphaUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/2" + result;
-		document.getElementById("alphaUrl").textContent="Registered Alpha Tester Download v" + result;
-		}
+        appVersion = 3;
+
+
+        function startUrls() {
+            var result = 2;
+            document.getElementById("internalUrl").href = "https://play.google.com/apps/test/com.lindev.cook_safe/1" + result;
+            document.getElementById("internalUrl").textContent = "Registered Internal Tester Download v" + result;
+            document.getElementById("alphaUrl").href = "https://play.google.com/apps/test/com.lindev.cook_safe/2" + result;
+            document.getElementById("alphaUrl").textContent = "Registered Alpha Tester Download v" + result;
+        }
     </script>
 
 </head>
@@ -34,33 +34,38 @@
 <body onload="startUrls()">
     <h1>Oxfordshire County Council Projects</h1>
     <ul>
+        <h3>Web Builds</h3>
         <li>
             <a href="cook_safe/index.html">Cook_Safe_v3</a>
         </li>
-        <li> <a href="cook_safe_moderator/index.html">Cook_Safe_moderator_v3</a></li>
-		<br>
-		
-        <li> <a href="#" id = "internalUrl" </a>Registered Internal Tester Download
-        </li>
-        <li> <a href="#" id = "alphaUrl" </a>Registered Alpha Tester Download
-        </li>
-		<br>
-		<textarea cols="10" id="SearchText" rows="1"></textarea>
+        <li> <a href="cook_safe_moderator/index.html">Cook Safe Moderator (USE THIS ONE)</a></li>
+        <li> <a href="/cooksafe.html">Cook Safe Moderator (This one is migrated to a new off site hosting.)</a></li>
+        <br>
+        <h3>Android Builds</h3>
 
-		<button onclick="updateUrls()" type="button">Set URLS to Specific Version</button>
-<h3> Downloading APKS directly is now discontinued, please email me oscarlindenbaum@gmail.com to be added to the alpha testers so you can access the download through the play store.</h3>
-		<script>
-		
-		function updateUrls() {
-			var result = document.getElementById("SearchText").value;
-			//document.getElementById("result").innerHTML = result;
-			document.getElementById("internalUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/1" + result;
-			document.getElementById("internalUrl").textContent="Registered Internal Tester Download v" + result;
-			document.getElementById("alphaUrl").href="https://play.google.com/apps/test/com.lindev.cook_safe/2" + result;
-			document.getElementById("alphaUrl").textContent="Registered Alpha Tester Download v" + result;
-		}		
-		</script>
-		<br>
+        <li> <a href="#" id="internalUrl" </a>Registered Internal Tester Download
+        </li>
+        <li> <a href="#" id="alphaUrl" </a>Registered Alpha Tester Download
+        </li>
+        <br>
+        <h3>IOS Builds</h3>
+
+        <h3> Internal Testing is now available on testflight for IOS!, please contact me to obtain access.</h3>
+        <textarea cols="10" id="SearchText" rows="1"></textarea>
+
+        <button onclick="updateUrls()" type="button">Set URLS to Specific Version</button>
+        <h3> Downloading APKS directly is now discontinued, please email me oscarlindenbaum@gmail.com to be added to the alpha testers so you can access the download through the play store.</h3>
+        <script>
+            function updateUrls() {
+                var result = document.getElementById("SearchText").value;
+                //document.getElementById("result").innerHTML = result;
+                document.getElementById("internalUrl").href = "https://play.google.com/apps/test/com.lindev.cook_safe/1" + result;
+                document.getElementById("internalUrl").textContent = "Registered Internal Tester Download v" + result;
+                document.getElementById("alphaUrl").href = "https://play.google.com/apps/test/com.lindev.cook_safe/2" + result;
+                document.getElementById("alphaUrl").textContent = "Registered Alpha Tester Download v" + result;
+            }
+        </script>
+        <br>
         <!-- <li><a href="builds/release/app-release.apk">Cook_Safe_v3 APK
                     </a></li>
             <ul>
@@ -72,11 +77,11 @@
                         Updated)</a></li>
                 <li><a href="builds/release/app-x86_64-release.apk">Cook_Safe_v3 APK Build x86_64 (Not Updated)</a></li>
             </ul> -->
-        
+
         <br>
-		<li> <a href="https://drive.google.com/open?id=19BvkjU7ZYI-G3pFS3fOmKpNiYqqcd57Z" </a>IOS unsigned ipa
+        <li> <a href="https://drive.google.com/open?id=19BvkjU7ZYI-G3pFS3fOmKpNiYqqcd57Z" </a>IOS unsigned ipa
         </li>
-		<br>
+        <br>
         <li> <a href="cook_safe_manual.docx">Documentation (DOCX)</a></li>
         <li> <a href="cook_safe_manual.pdf">Documentation (PDF)</a></li>
     </ul>
