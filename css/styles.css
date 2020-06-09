@@ -2329,3 +2329,14 @@ a:hover.back-to-top {
 #currentWork {
     padding-top: 5%;
 }
+
+
+.hyperlink {
+    color: white;
+}
+
+.white_bullet_point{
+
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: white;
+}
