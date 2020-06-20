@@ -3,18 +3,18 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "8790f44fc27c9e62d26d81417956dbd1",
-"assets/assets/sounds/buzzer.m4a": "0d6053ad6979d819ac601c6e6bb8737a",
+  "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "0f11e074c2039a6bd22a83fee77d6e41",
+"assets/NOTICES": "ed65dd2829eb3f83a97e6a23b4115d34",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"assets/sounds/buzzer.m4a": "0d6053ad6979d819ac601c6e6bb8737a",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "9c94568339baaac8ec440915082d1d67",
 "/": "9c94568339baaac8ec440915082d1d67",
-"main.dart.js": "5997c9f763481fb79fdbba90bd2c7094",
+"main.dart.js": "647f640620dadd82a8a83285d6193f1a",
 "manifest.json": "51bdbb07ece70b015d77af02b76f2b0d"
 };
 
@@ -129,7 +129,7 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
-  if (event.message == 'skipWaiting') {
+  if (event.data == 'skipWaiting') {
     return self.skipWaiting();
   }
 
