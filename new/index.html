@@ -5,6 +5,7 @@
     <style>
         body {
             margin: 0;
+            overflow: hidden;
         }
 
         #canvas {
@@ -20,7 +21,13 @@
     <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
     <script type="text/javascript">
         window.addEventListener("DOMContentLoaded", function () {
-
+            let mug;
+            let walls;
+            let table_top;
+            let keyboard;
+            let inner_coffee;
+            let monitor;
+            let lamp = { "bulb": null, "stem": null, "base": null, "shade": null, "switch": null, "value": false };
 
             var canvas = document.getElementById("canvas");
             var engine = new BABYLON.Engine(canvas, true);
@@ -40,50 +47,8 @@
 
 
 
-
-                var screen_overlay_animation = new BABYLON.Animation("screen_overlay_animation", "position.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
-                var coffee_in_mug_animation = new BABYLON.Animation("coffee_in_mug_animation", "position.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
-
-                //movement up and down animation
-                var keys = [];
-
-                //At the animation key 0, the value of scaling is "1"
-                keys.push({
-                    frame: 0,
-                    value: 20.68
-                });
-
-                //At the animation key 20, the value of scaling is "0.2"
-                keys.push({
-                    frame: 20,
-                    value: 22.68
-                });
-
-                //At the animation key 100, the value of scaling is "1"
-                keys.push({
-                    frame: 100,
-                    value: 20.68
-                });
-                screen_overlay_animation.setKeys(keys);
-                screen_overlay.animations = [];
-                screen_overlay.animations.push(screen_overlay_animation);
-
-
-                coffee_in_mug_animation.setKeys(keys);
-
-
-                // var box2 = BABYLON.Mesh.CreateBox("b2", 1.0, scene);
-                // box2.position.x = -6;
-                // // box2.scaling = BABYLON.Vector3(1,1,0.3);
-                // var box3 = BABYLON.Mesh.CreateBox("b3", 1.0, scene);
-                // box3.position.x = 6;
-                // box3.scaling = BABYLON.Vector3(1,1,0.3);
-                // BABYLON.SceneLoader.Append("./", "website.obj", scene, function (scene) {
-                //     // do something with the scene
-
-                // });
                 BABYLON.SceneLoader.ImportMesh(
-                    "",
+                    null,
                     " ./",
                     "website.obj",
                     scene,
@@ -93,14 +58,47 @@
 
                         //log the name of the meshes we just imported
                         for (var i = 0; i < meshes.length; i++) {
-                            console.log(meshes[i].name);
+                            // console.log(meshes[i].name);
                             if (meshes[i].name == "Coffee_Cylinder") {
-                                console.log("Setting animation");
-                                meshes[i].animations = [];
-                                meshes[i].animations.push(coffee_in_mug_animation);
+                                inner_coffee = meshes[i];
+                                inner_coffee.material.diffuseColor = BABYLON.Color3.FromHexString("#6f4e37");
+                                setupCoffeeAnimation(inner_coffee);
                             }
                             else if (meshes[i].name == "tea_mug_Cylinder") {
-                            //    meshes[i].isVisible = false;
+                                mug = meshes[i];
+                                mug.isPickable = true;
+                            }
+                            else if (meshes[i].name == "walls") {
+                                walls = meshes[i];
+                            }
+                            else if (meshes[i].name == "10105_Computer_Keyboard_v1_L3") {
+                                keyboard = meshes[i];
+                                keyboard.isPickable = true;
+                            }
+                            else if (meshes[i].name == "table_top") {
+                                table_top = meshes[i];
+                            }
+                            else if (meshes[i].name == "Monitor_27'_Curved") {
+                                monitor = meshes[i];
+                            }
+                            else if (meshes[i].name == "capana") {
+                                lamp['shade'] = meshes[i];
+                            }
+                            else if (meshes[i].name == "Conector") {
+                                meshes[i].isPickable;
+                                lamp['base'] = meshes[i];
+                            }
+                            else if (meshes[i].name == "cuello") {
+                                meshes[i].isPickable;
+                                lamp['stem'] = meshes[i];
+                            }
+                            else if (meshes[i].name == "bombilla") {
+                                meshes[i].isPickable;
+                                lamp['bulb'] = meshes[i];
+                            }
+                            else if (meshes[i].name == "interruptor") {
+                                meshes[i].isPickable;
+                                lamp['switch'] = meshes[i];
                             }
                         }
 
@@ -110,10 +108,13 @@
 
 
 
+                setupPickHandlerBabylon(scene);
+
+
                 var freeCamera = new BABYLON.FreeCamera("FreeCamera", new BABYLON.Vector3(0, 24, -20), scene);
                 freeCamera.rotation = new BABYLON.Vector3(0.35, 0, 0);
                 scene.activeCamera = freeCamera;
-                freeCamera.attachControl(canvas, true);
+                // freeCamera.attachControl(canvas, true);
                 scene.activeCamera.attachControl(canvas, true);
 
                 return scene;
@@ -168,47 +169,11 @@
 
             var scene = createScene();
 
-            //detects if object is pressed;
-            scene.onReadyObservable.add(function () {
-                for (var i = 0; i < scene.meshes.length; i++) {
-                    var mesh = scene.meshes[i];
-                    mesh.isPickable = true;
-                    mesh.actionManager = new BABYLON.ActionManager(scene);
 
-                    mesh.actionManager
-                        .registerAction(
-                            new BABYLON.ExecuteCodeAction(
-                                BABYLON.ActionManager.OnPickTrigger, function (bjsevt) {
-                                    // console.log(bjsevt);
-                                    header.textContent = bjsevt.source.name;
-                                    if (bjsevt.source.name == "screen_overlay") {
-                                        //runanimation
-                                        var so = scene.getMeshByName("screen_overlay");
-                                        scene.beginAnimation(so, 0, 100, true);
-
-                                        // var coff = scene.getMeshByID("Coffee_Cylinder");
-                                        // scene.beginAnimation(coff, 0, 100, true);
-                                    }
-
-                                }
-                            )
-                        )
-                }
-            });
-
-            scene.onDispose = function () {
-                if (document.getElementById("buttonbox")) {
-                    document.getElementById("buttonbox").parentNode.removeChild(document.getElementById("buttonbox"));
-                }
-            }
-
-
-
-            var scene = createScene();
             // scene.debugLayer.show();
             engine.runRenderLoop(function () {
 
-                // // var light  = scene.getLightByName("spotlight");
+                // var light  = scene.getLightByName("Omni");
                 // var coffee_level = scene.getMeshByID("Coffee_Cylinder");
                 // coffee_level.position.y += 0.01;
                 // if (coffee_level.position.y > 0.6) {
@@ -217,7 +182,79 @@
                 // light.y -= 0.01;
                 scene.render();
             });
+
+
+            function setupPickHandlerBabylon(scene) {
+                scene.onPointerObservable.add(function (pInfo) {
+                    var dpic = scene.pick(scene.pointerX, scene.pointerY);
+                    if (pInfo.type === BABYLON.PointerEventTypes.POINTERTAP) {
+                        // var header = document.getElementById("header");
+                        // header.textContent = dpic.pickedMesh.name;
+                        if (dpic.pickedMesh != null) {
+                            if (mug != null) {
+                                if (dpic.pickedMesh.name == mug.name) {
+                                    // var tmp = scene.getMeshByName(mug.name);
+                                    runCoffeeAnimation(scene);
+
+                                }
+                            }
+                            if (monitor != null) {
+                                if (dpic.pickedMesh.name == monitor.name) {
+                                    // var tmp = scene.getMeshByName(mug.name);
+                                    monitor.material.diffuseColor = BABYLON.Color3.FromHexString("#" + Math.floor(Math.random() * 16777215).toString(16));
+
+                                }
+                            }
+                            if (lamp['switch'] != null && lamp['bulb'] != null && lamp['base'] != null) {
+                                if (dpic.pickedMesh.name == lamp['switch'].name || dpic.pickedMesh.name == lamp['base'].name) {
+                                    if (lamp['value'] == true) {
+                                        lamp['base'].material.diffuseColor = BABYLON.Color4.FromHexString("#00fad16b");
+                                        lamp['value'] = false;
+                                    } else {
+                                        lamp['base'].material.diffuseColor = BABYLON.Color4.FromHexString("#fffad16b");
+                                        lamp['value'] = true;
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+                })
+            }
+
+            function setupCoffeeAnimation(inner_coffee) {
+                var coffee_keys = [];
+                var coffee_liquid_animation = new BABYLON.Animation("coffee_liquid_animation", "position.y", 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT);
+                coffee_keys.push({
+                    frame: 0,
+                    value: 0,
+                });
+                coffee_keys.push({
+                    frame: 45, //as 30fps then frame 45 is 1.5 seconds
+                    value: -0.7,
+                });
+                coffee_keys.push({
+                    frame: 90, //as 30fps then frame 45 is 1.5 seconds
+                    value: -0.7,
+                });
+                coffee_keys.push({
+                    frame: 120, //as 30fps then frame 45 is 1.5 seconds
+                    value: 0,
+                });
+                coffee_liquid_animation.setKeys(coffee_keys);
+                inner_coffee.animations = [];
+                inner_coffee.animations.push(coffee_liquid_animation);
+            }
+
+            function runCoffeeAnimation(scene) {
+                scene.beginAnimation(inner_coffee, 0, 120, true);
+            }
+
         });
+
+
+
     </script>
 </body>
 

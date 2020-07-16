@@ -1,0 +1,68 @@
+Exporter version: 6.4.3, Blender version: 2.83.2
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\Users\Oscar\OneDrive - University of Birmingham\Coding\website_update\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  tea_mug_Cylinder
+		processing begun of material:  teamug
+		Custom split normals with tangents being used
+		num positions      :  34922
+		num normals        :  34922
+		num tangents       :  139688
+		num uvs            :  69844
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  59328
+	processing begun of mesh:  Monitor 27' Curved
+		processing begun of material:  0,0,0
+		processing begun of material:  191,191,191
+		processing begun of material:  0,0,0_1
+		processing begun of material:  5,5,5
+		processing begun of material:  60,59,59
+		processing begun of multimaterial:  website.Multimaterial#0
+		Custom split normals with tangents being used
+		num positions      :  5867
+		num normals        :  5867
+		num tangents       :  23468
+		num uvs            :  11734
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4443
+	processing begun of mesh:  tube
+		processing begun of material:  Mat.1
+		processing begun of material:  Chrome Dirty
+		processing begun of material:  default
+		processing begun of multimaterial:  website.Multimaterial#1
+		num positions      :  1407
+		num normals        :  1407
+		num tangents       :  0
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  572
+	processing begun of mesh:  walls
+		processing begun of material:  Walls
+			processing texture Walls_Color
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'C:\\Users\\Oscar\\OneDrive - University of Birmingham\\Coding\\website_update\\..\\..\\..\\..\\..\\Walls_Color.psd'
+========= An error was encountered =========
+  File "C:\Users\Oscar\AppData\Roaming\Blender Foundation\Blender\2.83\scripts\addons\babylon_js\json_exporter.py", line 115, in execute
+    mesh = Mesh(object, scene, self)
+  File "C:\Users\Oscar\AppData\Roaming\Blender Foundation\Blender\2.83\scripts\addons\babylon_js\mesh.py", line 158, in __init__
+    mat.processImageTextures(bpyMesh)
+  File "C:\Users\Oscar\AppData\Roaming\Blender Foundation\Blender\2.83\scripts\addons\babylon_js\materials\material.py", line 79, in processImageTextures
+    tex.process(self.exporter, True, bpyMesh)
+  File "C:\Users\Oscar\AppData\Roaming\Blender Foundation\Blender\2.83\scripts\addons\babylon_js\materials\texture.py", line 84, in process
+    self.uvMapName = bpyMesh.data.uv_layers.active.name
+ERROR:  'NoneType' object has no attribute 'name'
+========= end of processing =========
+elapsed time:  0 min, 3.9608 secs
