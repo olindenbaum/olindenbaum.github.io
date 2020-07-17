@@ -1,0 +1,9 @@
+num = 16
+if num &lt; 0:
+   print("Enter a positive number")
+else:
+   sum = 0
+   while(num &gt; 0):
+       sum += num
+       num -= 1
+   print("The sum is", sum)

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./selector.js"></script>
+    <script src="./tools.js"></script>
+    <script src="./funct.js" defer></script>
+    <title>Programmer Typing Test</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <div class="row header" id="header">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <span>WPM :</span><span d="wpn_span">0</span>
+                        <span>Time :</span><span id="timer_span">0</span>
+                        <span>Completed :</span><span id="completed_span">0</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="lang-select">Choose Language:</label>
+                        <select name="lang" id="lang-select">
+                            <option value="0">Python</option>
+                            <option value="1">C</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row flex">
+            <div id="viewer" class="col-md-5 flex-fill">
+                <h3>Type This!</h3>
+                <code>
+                    <pre id="viewer-code">
+                        code
+                    </pre>
+                </code>
+            </div>
+            <div id="typer" class="col-md-7 flex-fill"><h3>Type Here</h3><textarea id="typer_input" autofocus>type here</textarea></div>
+        </div>
+    </div>
+</body>
+
+</html>
