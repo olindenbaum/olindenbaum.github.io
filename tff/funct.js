@@ -26,3 +26,7 @@ inputElement.addEventListener('input', () => {
         if (e !== BreakException) throw e;
     };
 })
+
+var sel = document.getElementById('lang-select');
+
+ sel.addEventListener("change", getSnippet);
