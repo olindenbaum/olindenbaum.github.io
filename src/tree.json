@@ -1,0 +1,67 @@
+{
+  "name": "About Me",
+  "icon": "BiCool",
+  "child": [
+    {
+      "name": "Medium Posts",
+      "icon": "medium",
+      "product": [
+        {
+          "name": "Tr0ll",
+          "link": "https://medium.com/@loscarrubberemail/tr0ll-machine-write-up-oscar-l-868543b061a1",
+          "icon": "BiLink"
+        },
+        {
+          "name": "VTCSEC",
+          "link": "https://medium.com/@loscarrubberemail/vtcsec-write-up-oscar-l-b4619813061b",
+          "icon": "BiLink"
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "icon": "BiLibrary",
+      "product": [
+        {
+          "name": "DragonSkulle",
+          "link": "https://github.com/olindenbaum/static/blob/main/DragonSkulleDocumentation.pdf",
+          "icon": "BiBook"
+        },
+        {
+          "name": "Noteswitch",
+          "link": "https://github.com/olindenbaum/static/blob/main/Noteswitch%20NEA.pdf",
+          "icon": "BiBook"
+        }
+      ]
+    }
+  ],
+  "parent": [
+    {
+      "name": "Repos",
+      "icon": "github",
+      "link": "https://github.com/olindenbaum",
+      "child": [
+        {
+          "name": "DragonSkulle",
+          "link": "https://github.com/olindenbaum/dragonskulle",
+          "icon": "BiGitBranch",
+          "child": {
+            "name": "Documentation",
+            "link": "https://github.com/olindenbaum/static/",
+            "icon": "BiGitBranch"
+          }
+        },
+        {
+          "name": "SWA",
+          "link": "https://github.com/swauk",
+          "icon": "BiGitBranch"
+        }
+      ]
+    },
+    {
+      "name": "Linkedin",
+      "icon": "linkedin",
+      "link": "https://uk.linkedin.com/in/oscarlindenbaum"
+    }
+  ]
+}
